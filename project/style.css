@@ -1,0 +1,679 @@
+/*עיצוב כללי לכל העמודים*/
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows:10vh 1fr 9.5vh;
+    margin: 0; 
+    text-align: center;
+    font-family: Segoe UI Semibold;
+    background-color: black;
+}
+/*עמוד אודות*/
+.bodyAbout{
+    background-color: rgb(255, 254, 251);
+}
+/*לגלריות header */
+.galleryH p{
+    color: white;
+    font-size:40px;
+    margin:0;
+}
+.galleryH a{
+    text-decoration: none;
+    font-size:40px;
+    color: white;
+}
+.galleryH{
+    display:flex;
+    justify-content:space-around;
+}
+/*לכל העמודים header*/
+header{
+padding-right:2rem;
+background-color:rgb(249, 213, 185);
+z-index:8;
+}
+.a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size:27px;
+  }
+  
+.a:hover {
+    color: white;
+  }
+  
+.a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .a:hover::before {
+    transform: scaleX(1);
+  }
+.active{
+    border-bottom: solid 2px white;
+}
+#header ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:end;
+    gap:10rem;
+    flex-direction:row-reverse; 
+}
+.link{
+    position:absolute;
+    display:none;
+}
+.link a{
+    text-decoration:none;
+    font-size:17px;
+    color:rgb(230, 155, 99);
+    padding: 1rem;
+    z-index:2;
+}
+.link a:hover{
+    background-color:rgba(249, 213, 185);
+    color:white;
+    border: solid 2px rgb(230, 155, 99);
+}
+.link{
+    display: none;
+    width:200%;
+    margin-top:0.2rem;
+    margin-right:2rem;
+    margin-left: 2rem;
+    transform: translate(-48%,0);
+    z-index: 7;
+    background-color:rgb(249, 213, 185);
+}
+.menu{
+    position: relative;
+}
+.menu:hover .link{
+    display: flex;
+    flex-direction:column;
+}
+/*לדף הבית aside*/
+aside .toGallery{
+    background-color:rgb(230, 155, 99);
+    color: black;
+    padding:0.5rem 0.5rem 0.5rem 0.5rem;
+    text-decoration: none;
+    font-size:15px;
+    margin-bottom:5px;
+    border-radius: 20%;
+}
+aside img{
+   height:100%;
+transition:transform 0.4s;
+}
+aside img:hover{
+    transform: scale(1.2);
+}
+aside{
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+}
+/*מבוא לגלריות*/
+.tastePicture p{
+font-size:60px;
+color:rgb(230, 155, 99) ;
+margin-bottom:16vh;
+}
+.tastePicture img{
+    width:25%;
+    transition: transform 1s;
+    border-radius: 20%;
+}
+.tastePicture img:hover{
+    transform: scale(1.4);
+    border: solid 2px rgb(249, 213, 185);
+}
+/*גלריות*/
+#galleryM2 p,#galleryM3 p{
+    font-size:40px;
+    color: white;
+    background-color: rgb(249, 213, 185);
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom:1.5rem;
+    margin-block-start:0;
+    margin-block-end: 0em;
+}
+/*גלרית תמונות ניו בורן*/
+#galleryM1{
+    margin:4% 8% 1% 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:28% 28% 28%;
+    grid-template-areas: "image4 image3 image2 image2"
+                         "image1 image1 image2 image2"
+                         "image1 image1 image6 image7";
+    gap:8px;
+}
+#galleryM1 img:hover{
+    opacity: 0.7;
+}
+#galleryM1 img{
+    width:100%;
+  height: 100%;
+}
+.image1{
+  grid-area:image1;
+}
+.image2{
+  grid-area: image2;
+}
+.image3{
+    grid-area:image3;
+  }
+  .image4{
+    grid-area:image4;
+  }
+  .image6{
+    grid-area:image6; 
+  }
+  .image7{
+    grid-area:image7;
+ }
+ #galleryM2,#galleryM3{
+    margin-block-end:0;
+ }
+ /*גלרית תמונות חלאקה*/
+ .galleryM2{
+    margin:4% 8% 0% 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:10% 14% 10% 27% 21%;
+    grid-template-areas:"three1 three1 three11 three3 three4"
+                        "three1 three1 three5 three3 three4"
+                        "three1 three1 three5 three7 three7"
+                        "three8 three2 three5 three7 three7"
+                        "three8 three2 three9 three6 three10";
+gap:8px;
+
+}
+.galleryM2 img:hover{
+    opacity: 0.7;
+}
+.galleryM2 img{
+    width: 100%;
+    height: 100%;
+}
+.img1{
+    grid-area:three1;
+}
+.img2{
+    grid-area:three2;
+}
+.img3{
+    grid-area:three3;
+}
+.img4{
+    grid-area:three4;
+}
+.img5{
+    grid-area:three5;
+}
+
+.img6{
+    grid-area:three6;
+}
+.img7{
+    grid-area:three7;
+}
+.img8{
+    grid-area:three8;
+}
+.img9{
+    grid-area:three9;
+}
+.img10{
+    grid-area:three10;
+}
+.img11{
+    grid-area:three11;
+}
+/*גלרית תמונות סמאשקייק*/
+.galleryM3{
+    margin:4% 8% 1% 8%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:28% 30% 27%;
+    grid-template-areas:"one1 one1 one2 one4"
+                        "one1 one1 one8 one5"
+                        "one3 one6 one7 one5";
+    gap: 10px;
+}
+.galleryM3 img:hover{
+    opacity: 0.7;
+}
+.galleryM3 img{
+    width: 100%;
+    height: 100%;
+}
+.one1{
+    grid-area:one1;
+}
+.one2{
+    grid-area:one2;
+}
+.one3{
+    grid-area:one3;
+}
+.one4{
+    grid-area:one4;
+}
+.one5{
+    grid-area:one5;
+}
+.one6{
+    grid-area:one6;
+}
+.one7{
+    grid-area:one7;
+}
+.one8{
+    grid-area:one8;
+}
+/*דף גלריות footer*/
+.galleryF{
+    height:1vh;
+    }
+    .galleryF a{
+    text-decoration: none;
+    color:white;
+    background-color: rgb(230, 155, 99);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    }
+/*עיצוב דף אודות*/
+main .about{
+    color: rgb(230, 155, 99);
+    border-bottom:solid 2px rgb(230, 155, 99);
+    border-top:solid 2px rgb(230, 155, 99);
+    text-decoration: none;
+    padding:1rem;
+}
+.about{
+    text-align: end;
+    margin: 0 10% 0 10%;
+}
+.about h2{
+    font-size:80px;
+    color: black;
+    margin-block-end:0.2em;
+}
+.about h4{
+    font-size:40px;
+    background-color: rgb(230, 155, 99) ;
+    color: white;
+    display: inline-block;
+    padding-bottom:0.5rem;
+    padding-left:2rem;
+    padding-right:2rem ;
+    margin-block-start:0em;
+    margin-block-end:1em;
+    transform: translate(-8%, 0);
+}
+.hello{
+    font-family: "Heebo", Sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+.treeger h5{
+color: rgb(230, 155, 99);
+background-color:black;
+font-size:30px;
+display: inline-block;
+padding-bottom:0.3rem;
+    padding-left:2rem;
+    padding-right:2rem ;
+    text-decoration:none;
+    margin-block-start:0.8em;
+}
+.treeger h5:hover{
+    background-color:rgb(230, 155, 99);
+    color: white;
+}
+h6{
+font-family: "Heebo", Sans-serif;
+font-size:18px;
+margin-block-start:0.5em;
+margin-block-end: 0.5em;
+transform: translate(-7.2%, 0);
+}
+.thingP{
+width:60%;
+transform: translate(55%, 0);
+}
+.thing1{
+   opacity:0;
+}
+.treeger:hover .thing1{
+  animation-name: insert;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  animation-iteration-count:1;
+}
+.thing2 {
+    opacity:0;
+ }
+ .treeger:hover .thing2{
+   animation-name:insert;
+   animation-duration:2s;
+   animation-fill-mode:forwards;
+   animation-iteration-count:1;
+ }
+.thing3{
+    opacity:0;
+ }
+.treeger:hover .thing3{
+animation-name:insert;
+animation-duration:2s;
+animation-fill-mode:forwards;
+animation-iteration-count:1;
+ }
+@keyframes insert{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+h3{
+    display: inline-block;
+    background-color:rgb(230, 155, 99);
+    color: black;
+    padding-bottom:0.3rem;
+    padding-left:3rem;
+    padding-right:3rem ;
+    margin-block-start:1.5em;
+margin-block-end:0;
+font-size:40px;
+}
+.about ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:end;
+    gap:10rem;
+
+}
+span{
+    font-size:50px;
+}
+.about ul p{
+    color: rgb(230, 155, 99);
+    margin-block-start:0.5em;
+    margin-block-end:1em;
+}
+.end{
+    font-family: "Heebo", Sans-serif;
+    color: rgb(230, 155, 99);
+    transform: translate(-5%, 0);
+    font-size:23px;
+    margin-block-end:4em;
+    font-weight: 600;
+}
+/*כפתור לשליחת מייל*/
+.mail a{
+    text-decoration: none;
+}
+.mail img{
+    width:60%;
+}
+.mail{
+    position: absolute;
+    transform: translate(1vw,20vh);
+    border-radius:50%;
+    border: solid 3px black;
+    padding-top:24px;
+    padding-bottom: 24px;
+    position: fixed;
+    z-index: 9;
+}
+/*עיצוב הטופס ליצירת קשר*/
+form h2{
+font-size:180px;
+padding: 0;
+color: rgb(255, 111, 0);
+margin-block-end:0;
+margin-block-start:0;
+animation-name: color;
+animation-duration:1.5s;
+animation-delay:1s;
+animation-iteration-count:50;
+animation-direction:alternate;
+text-align: center;
+}
+form{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:center;
+    align-items: center;
+    gap:6rem;
+    margin-top:15vh;
+    
+}
+.order{
+ margin-left:5%;
+ margin-right:5%;
+}
+.form{
+    direction:rtl;
+    text-align:start;
+    border-radius:2%;
+    padding:2rem;
+    background-color: white;
+}
+.form input{
+    border: none;
+    border-bottom:solid 2px rgb(230, 155, 99);
+    margin-bottom:4%;
+}
+form textarea{
+    resize: none;
+    border: none;
+    border-bottom: solid 3px rgb(230, 155, 99);
+    width:100%;
+    height:30px;
+    margin-bottom: 5%;
+}
+form a{
+    background-color:rgb(230, 155, 99);
+    font-size: 19px;
+    border: none;
+    color: white;
+    padding:0.2em 1em;
+    text-decoration: none;
+    transform: translateX(10%);
+}
+form h5{
+    font-size: 15px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    display:inline;
+    color: gray;
+}
+form p{
+    font-size: 10px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    display:inline;
+    color: gray;
+}
+@keyframes color{
+    0%{
+        color:rgb(255, 111, 0) ;
+    }
+    20%{
+        color:blue;
+    }
+    40%{
+        color: yellow;
+    }
+    60%{
+        color: red;
+    }
+    80%{
+        color: chartreuse;
+    }
+}
+/*לכל העמודים footer*/
+footer img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.footer{
+ height: 25px;
+ background-color:rgb(249, 213, 185);  
+ margin: 0;
+ color:black;
+ font-size:15px;
+}
+/*עיצוב הדף המאשר הזמנה*/
+.send p{
+    text-align: center;
+    font-size:65px;
+    animation-name: nice_popup;
+    animation-duration:0.7s;
+    animation-direction:alternate;
+    animation-iteration-count:14;
+    animation-delay: 1s;
+    color: black;
+}
+@keyframes nice_popup{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+.send{
+    background-image: url(images/IMG_1802.jpg);
+    background-size:100vw 120vh;
+}
+/*כפתור מעבר לקישורים במובייל*/
+header buttom img{
+    display: none;
+}
+@media screen and (max-width:1200px){
+    .a{
+        font-size:24px;
+    }
+    #header ul{
+        gap:3.5rem;
+    }
+    .send{
+        background-color:rgb(249, 213, 185);
+        background-image:none;
+
+    }
+    .send p{
+        font-size:40px;  
+    }
+    .end{
+        font-size: 16px;
+    }
+    h3{
+        font-size:36px;
+        padding-left:1rem;
+        padding-right:1rem ;
+    }
+    .about ul{
+        gap:7rem;
+    }
+    form{
+        gap:4rem ;
+    }
+    form h2{
+        font-size:110px;
+        }
+    
+}
+@media screen and (max-width:600px)
+{
+ .a{
+    font-size:20px;
+    display: none;
+}
+header buttom img{
+    display: block;
+    width: 10vh;
+    padding: 2px 2px;
+    border-radius: 50%;
+}
+#header ul{
+    gap:2.7rem;
+}
+.to_gallery{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center ;
+    gap:1.5rem;
+    margin-top:10px;
+}
+form h2{
+    font-size:130px;
+    }
+    .form{
+        margin-bottom:10%;
+    }
+    .end{
+        font-size:14px;
+        transform: translate(-2%, 0);
+    }
+    .about ul{
+        flex-direction:column;
+        gap:1.5rem;
+        align-items: center;
+    }
+    h3{
+        font-size:32px;
+        padding-left:1rem;
+        padding-right:1rem ;
+    }
+    .hello{
+        font-size: 18.5px;
+    }
+    .about h4{
+        font-size:35px;
+    }
+    .about{
+        margin: 0 6% 0 6%;
+    }
+    .send p{
+        font-size:27px;  
+    }
+    .link{
+        transform: translate(-53%,0);
+    }
+    .tastePicture img{
+    width:35%;
+}
+.tastePicture p{
+margin-bottom:11vh;
+}
+
+}
